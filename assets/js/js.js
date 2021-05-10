@@ -16,10 +16,10 @@ var lowerCase = upperCase.toLowerCase();
  var verifyLowerCase;
 
 // #4 create function & prompt for passwordLength.
-var passwordLengthPrompt = ["How many characters would you like for you password?"]
+var passwordLengthPromptve = ["How many characters would you like for you password?"]
 
 function generatePassword() {
-  var verifyPasswordLength = prompt("How many characters would you like for your password?");
+  var verifyPasswordLength = prompt(passwordLengthPromptve);
 }
 // Btn is not working...
 
@@ -30,9 +30,13 @@ function generatePassword() {
 while(verifyPasswordLength >= 8 || verifyPasswordLength <= 100) {
   alert("Your password must have between 8-100 characters! Please try again.");
   var verifyPasswordLength = prompt("How many characters would you like for your password?");
-} 
-// #6 Alert how many characters the user selected.
+}
+
+// #6 Alert how many characters the user selected (Note: how do I add the verifyPasswordLegth string to alert??)
+alert("Your password will be" + verifyPasswordLength + "characters long");
+
 // #7 Password criteria selection
+
 // #8 Write Loop for inccorect answers and prompt questions again until all appropriate criteria is selected
 // #9 Action for password parameters
 // #10 Empty string to be filled based on loop selecting random characters form the array
