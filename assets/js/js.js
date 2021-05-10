@@ -5,11 +5,11 @@ document.querySelector("#generate").addEventListener("click", writePassword);
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialCharacters = ['!', '#', '$', '%', '&', '(', ')', '*', '+', '-', '=', '.', '/', '?', '@', '[', ']', '^', '_', '`', '{', '}', '|', '~', ';', ':'];
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var lowerCase = upperCase.toLowerCase();
+var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 // can I do this?? (ABOVE CODE)
 
 // #3 create var declarations for criteria
-var verifyPasswordLength = numbers;
+var verifyPasswordLength = "";
 var verifySpecialCharacters;
 var verifyUpperCase;
 var verifyLowerCase;
@@ -32,7 +32,7 @@ function generatePassword() {
   #5 Write Loop to 1st: check if the correct number of characters is selected;
   2nd: verify the select number of characters for password length.
   */
-  while (verifyPasswordLength <= 7 || verifyPasswordLength >= 101) {
+  while (verifyPasswordLength <= 7 || verifyPasswordLength >= 129) {
     alert("Your password must have between 8-100 characters! Please try again.");
     var verifyPasswordLength = prompt("How many characters would you like for your password?");
     }
