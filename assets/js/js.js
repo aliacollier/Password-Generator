@@ -1,5 +1,4 @@
 // Assignment code here
-alert("This works")
 // Added querySelector w/ Id Event listener to generate button; Once clicked this will start prompt for password.
 document.querySelector("#generate").addEventListener("click", writePassword);
 
