@@ -6,30 +6,26 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialCharacters = ['!', '#', '$', '%', '&', '(', ')', '*', '+', '-', '=', '.', '/', '?', '@', '[', ']', '^', '_', '`', '{', '}', '|', '~', ';', ':'];
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-// can I do this?? (ABOVE CODE)
 
 // #3 create var declarations for criteria
 var verifyPasswordLength = "";
 var verifySpecialCharacters;
 var verifyUpperCase;
 var verifyLowerCase;
-var verifyNumbers
-//Don't forget the verifyNumbers!!!!
+var verifyNumbers;
 
 // #4 create function & prompt for passwordLength.
   /* 
   use window.prompt()??; NO WINDOW NEEDED DEFEATS PURPOSE OF GENERATE BTN
-  if so before using window.prompt put in a var and it's name in front of the
+  Using prompt put in a var and it's name in front of the
   window prompt to catch the data. Also look up edge cases mod.3.1.8
   */
 
 function generatePassword() {
   var verifyPasswordLength = prompt("How many characters would you like for you password?");
 
-  // Btn is not working...
-
   /*
-  #5 Write Loop to 1st: check if the correct number of characters is selected;
+  #5 Write Loop (while) to 1st: check if the correct number of characters is selected;
   2nd: verify the select number of characters for password length.
   */
   while (verifyPasswordLength <= 7 || verifyPasswordLength >= 129) {
@@ -45,23 +41,21 @@ function generatePassword() {
   var verifyUpperCase = confirm("Click Ok if you want uppercase characters in your password.");
   var verifyLowerCase = confirm("Click Ok if you want lowercase characters in your password.");
   var verifyNumbers = confirm("Click Ok if you want numbers in your password.");
-    //Don't forget the verifyNumbers!!!!
 
-    // #8 Write Loop (while best fit!) for invalid non-selection & prompt questions again until at least 1 of criteria is selected
+    // #8 Write Loop (while = best fit!) for invalid non-selection: will be prompted questions again until at least 1 of criteria is selected
     while (verifySpecialCharacters === false && verifyUpperCase === false && verifyLowerCase === false) {
       alert("You have to choose one of the selections!");
       var verifySpecialCharacters = confirm("Click Ok if you want special characters in your password.");
       var verifyUpperCase = confirm("Click Ok if you want uppercase characters in your password.");
       var verifyLowerCase = confirm("Click Ok if you want lowercase characters in your password.");
       var verifyNumbers = confirm("Click Ok if you want numbers in your password.");
-      //Don't forget the verifyNumbers!!!!
-
     }
 
     // #9 Add action for password parameters (if statement???) (Also how do I combine mutltiple stings???)
     /* The concat() method is used to join two or more strings. [w3schools]
     This may allow me to combine whatever selected password criteria the user picked. Make sure syntax is correct!!!
     */
+
   // Variable for different characters selected to be in password
     var password = []
 
@@ -80,11 +74,10 @@ function generatePassword() {
     if(verifyNumbers) {
       password = password.concat(numbers);
     }
-    //Don't forget the verifyNumbers if statements!!!!
 
-    console.log(password)
+    console.log(password);
 
-    // #10 Empty string to be filled based on loop selecting random characters to form the array... How??? [w3schools for loop]
+    // #10 [EMPTY!!!] string to be filled based on loop selecting random characters to form the array... How??? [w3schools: for loop]
     // Variable for randomized selection of characters
     var passwordCriteria = ""
 
