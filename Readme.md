@@ -21,3 +21,5 @@ https://aliacollier.github.io/Password-Generator/
 
 Made with ✌🏾 by Alia Collier
 
+![PasswordScreenShot](https://user-images.githubusercontent.com/79668415/117608168-22c15780-b123-11eb-9312-30ec614089bc.jpg)
+
