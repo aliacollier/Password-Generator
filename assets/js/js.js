@@ -9,17 +9,18 @@ var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 var lowerCase = upperCase.toLowerCase();
 // can I do this?? (ABOVE CODE)
 
-// #3 create var declarations
+// #3 create var declarations for criteria
  var verifyPasswordLength = '';
  var verifySpecialCharacters;
  var verifyUpperCase;
  var verifyLowerCase;
+ //Don't forget the verifyNumbers!!!!
 
 // #4 create function & prompt for passwordLength.
-var passwordLengthPromptve = ["How many characters would you like for you password?"]
+var passwordLengthPrompt = ["How many characters would you like for you password?"]
 
 function generatePassword() {
-  var verifyPasswordLength = prompt(passwordLengthPromptve);
+  var verifyPasswordLength = prompt(passwordLengthPrompt);
 }
 // Btn is not working...
 
@@ -32,12 +33,24 @@ while(verifyPasswordLength >= 8 || verifyPasswordLength <= 100) {
   var verifyPasswordLength = prompt("How many characters would you like for your password?");
 }
 
-// #6 Alert how many characters the user selected (Note: how do I add the verifyPasswordLegth string to alert??)
+// #6 Alert how many characters the user selected (Note: how do I add the verifyPasswordLength string to alert??)
 alert("Your password will be" + verifyPasswordLength + "characters long");
 
 // #7 Password criteria selection
+var verifySpecialCharacters = confirm("Click Ok if you want special characters in your password.");
+var verifyUpperCase = confirm("Click Ok if you want uppercase characters in your password.");
+var verifyLowerCase = confirm("Click Ok if you want lowercase characters in your password.");
+//Don't forget the verifyNumbers!!!!
 
-// #8 Write Loop for inccorect answers and prompt questions again until all appropriate criteria is selected
+// #8 Write Loop (while best fit!) for invalid non-selection & prompt questions again until at least 1 of criteria is selected
+while(verifySpecialCharacters === false && verifyUpperCase === false && verifyLowerCase === false &&) {
+  alert("You have to choose one of the selections!");
+  var verifySpecialCharacters = confirm("Click Ok if you want special characters in your password.");
+  var verifyUpperCase = confirm("Click Ok if you want uppercase characters in your password.");
+  var verifyLowerCase = confirm("Click Ok if you want lowercase characters in your password.");
+  //Don't forget the verifyNumbers!!!!
+
+}
 // #9 Action for password parameters
 // #10 Empty string to be filled based on loop selecting random characters form the array
 // 
