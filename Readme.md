@@ -2,8 +2,10 @@
 
 ## Purpose
 
-A website that a user can use to generate a random password.
+A website that a user can utilize to generate a random password.
 This "random" password will be generated after completing the required prompts.
+The user will be prompted for password length followed by the different types of characters the user wants in the password.
+The types of characters used to generate the password includes: uppercase, lowercase, numbers, and special characters.
 
 ## Built With
 
@@ -17,5 +19,5 @@ https://aliacollier.github.io/password-generator/
 
 ## Contribution
 
-Made with ❤️ by Alia Collier
+Made with ✌🏾 by Alia Collier
 
