@@ -15,7 +15,7 @@ The types of characters used to generate the password includes: uppercase, lower
 
 ## Website
 
-https://aliacollier.github.io/password-generator/
+https://aliacollier.github.io/Password-Generator/
 
 ## Contribution
 
