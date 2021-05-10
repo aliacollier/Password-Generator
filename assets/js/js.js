@@ -27,6 +27,8 @@ function generatePassword() {
   /*
   #5 Write Loop (while) to 1st: check if the correct number of characters is selected;
   2nd: verify the select number of characters for password length.
+  !!!Write the correct loop so that if the initial question is not answered correctly
+  then if loops back. Pretty sure its if/else but haven't come up with a viable code yet
   */
   while (verifyPasswordLength <= 7 || verifyPasswordLength >= 129) {
     alert("Your password must have between 8-100 characters! Please try again.");
