@@ -1,8 +1,7 @@
-// Assignment code here
 // Added querySelector w/ Id Event listener to generate button; Once clicked this will start prompt for password.
 document.querySelector("#generate").addEventListener("click", writePassword);
 
-// #2 create var and arrays for: passwordLength, specialCharacters, upperCase, and lowerCase.
+// #2 create var and arrays for: passwordLength, specialCharacters, upperCase, lowerCase, and Numbers.
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialCharacters = ['!', '#', '$', '%', '&', '(', ')', '*', '+', '-', '=', '.', '/', '?', '@', '[', ']', '^', '_', '`', '{', '}', '|', '~', ';', ':'];
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -14,6 +13,7 @@ var verifyPasswordLength = numbers;
 var verifySpecialCharacters;
 var verifyUpperCase;
 var verifyLowerCase;
+var verifyNumbers
 //Don't forget the verifyNumbers!!!!
 
 // #4 create function & prompt for passwordLength.
@@ -32,7 +32,7 @@ function generatePassword() {
   #5 Write Loop to 1st: check if the correct number of characters is selected;
   2nd: verify the select number of characters for password length.
   */
-  while (verifyPasswordLength <= 7 || verifyPasswordLength >= 100) {
+  while (verifyPasswordLength <= 7 || verifyPasswordLength >= 101) {
     alert("Your password must have between 8-100 characters! Please try again.");
     var verifyPasswordLength = prompt("How many characters would you like for your password?");
     }
@@ -44,6 +44,7 @@ function generatePassword() {
   var verifySpecialCharacters = confirm("Click Ok if you want special characters in your password.");
   var verifyUpperCase = confirm("Click Ok if you want uppercase characters in your password.");
   var verifyLowerCase = confirm("Click Ok if you want lowercase characters in your password.");
+  var verifyNumbers = confirm("Click Ok if you want numbers in your password.");
     //Don't forget the verifyNumbers!!!!
 
     // #8 Write Loop (while best fit!) for invalid non-selection & prompt questions again until at least 1 of criteria is selected
@@ -52,6 +53,7 @@ function generatePassword() {
       var verifySpecialCharacters = confirm("Click Ok if you want special characters in your password.");
       var verifyUpperCase = confirm("Click Ok if you want uppercase characters in your password.");
       var verifyLowerCase = confirm("Click Ok if you want lowercase characters in your password.");
+      var verifyNumbers = confirm("Click Ok if you want numbers in your password.");
       //Don't forget the verifyNumbers!!!!
 
     }
@@ -73,6 +75,10 @@ function generatePassword() {
 
     if (verifyLowerCase) {
       password = password.concat(lowerCase);
+    }
+
+    if(verifyNumbers) {
+      password = password.concat(numbers);
     }
     //Don't forget the verifyNumbers if statements!!!!
 
