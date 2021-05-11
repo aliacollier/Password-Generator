@@ -30,13 +30,16 @@ function generatePassword() {
   !!!Write the correct loop so that if the initial question is not answered correctly
   then if loops back. Pretty sure its if/else but haven't come up with a viable code yet
   */
-  while (verifyPasswordLength <= 7 || verifyPasswordLength >= 129) {
-    alert("Your password must have between 8-100 characters! Please try again.");
-    var verifyPasswordLength = prompt("How many characters would you like for your password?");
+  if (verifyPasswordLength <= 7 || verifyPasswordLength >= 129) {
+    alert("Your password will be " + verifyPasswordLength + " characters long.");
+    } else {
+      alert("Your password must have between 8-100 characters! Please try again.");
+      var verifyPasswordLength = prompt("How many characters would you like for your password?");
+      // #6 Alert how many characters the user selected (Note: how do I add the verifyPasswordLength string to alert??)
+      alert("Your password will be " + verifyPasswordLength + " characters long.");
     }
 
-    // #6 Alert how many characters the user selected (Note: how do I add the verifyPasswordLength string to alert??)
-    alert("Your password will be " + verifyPasswordLength + " characters long.");
+    
 
   // #7 Password criteria selection
   var verifySpecialCharacters = confirm("Click Ok if you want special characters in your password.");
@@ -45,7 +48,7 @@ function generatePassword() {
   var verifyNumbers = confirm("Click Ok if you want numbers in your password.");
 
     // #8 Write Loop (while = best fit!) for invalid non-selection: will be prompted questions again until at least 1 of criteria is selected
-    while (verifySpecialCharacters === false && verifyUpperCase === false && verifyLowerCase === false) {
+    while (verifySpecialCharacters === false && verifyUpperCase === false && verifyLowerCase === false && verifyNumbers === false) {
       alert("You have to choose one of the selections!");
       var verifySpecialCharacters = confirm("Click Ok if you want special characters in your password.");
       var verifyUpperCase = confirm("Click Ok if you want uppercase characters in your password.");
