@@ -30,7 +30,7 @@ function generatePassword() {
   !!!Write the correct loop so that if the initial question is not answered correctly
   then if loops back. Pretty sure its if/else but haven't come up with a viable code yet
   */
-  if (verifyPasswordLength <= 7 || verifyPasswordLength >= 129) {
+  if (verifyPasswordLength <= 7 && verifyPasswordLength >= 129) {
     alert("Your password will be " + verifyPasswordLength + " characters long.");
     } else {
       alert("Your password must have between 8-100 characters! Please try again.");
